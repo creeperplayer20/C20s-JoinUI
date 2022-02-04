@@ -29,13 +29,12 @@ public function onEnable(): void {
 public function joinuiForm($player){
     $form = new CustomForm(function(Player $player, $data){
         if($data === null){
-            //The form has been closed by the player
+            
             return true;
         }
         switch($data){
             case 0:
-                //First Button
-                //Here is where you add the code to what this button will do.
+              
             break;
         }});
         $name = $player->getName();

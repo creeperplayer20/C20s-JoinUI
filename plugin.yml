@@ -1,0 +1,6 @@
+name: JoinUI
+version: 0.0.1
+main: creeperplayer20\joinui\Main
+author: creeperplayer20
+api: 4.0.8
+src-namespace-prefix: creeperplayer20\joinui

@@ -4,4 +4,6 @@
 
 title: "§a§lJoinUI"
 
-content: "Welcome§b $name §r! \n\nYou can edit this text in the §gconfig.yml"
+content: "Welcome§b $name§r! \n\nYou can edit this text in the §gconfig.yml"
+
+button: "§aOkay"

@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace creeperplayer20\joinui;
 
 use pocketmine\plugin\PluginBase;
-use jojoe77777\FormAPI\CustomForm;
+use jojoe77777\FormAPI\SimpleForm;
 use pocketmine\console\ConsoleCommandSender;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
@@ -20,30 +20,35 @@ public function onEnable(): void {
 
     $this->getServer()->getPluginManager()->registerEvents($this, $this);
 
-    $this->reloadConfig();
     $this->saveDefaultConfig();
-    $this->getConfig()->save();
 
 }
 
-public function joinuiForm($player){
-    $form = new CustomForm(function(Player $player, $data){
+public function joinuiForm($player) {
+    $form = new SimpleForm(function(Player $player, $data){
         if($data === null){
             
             return true;
         }
         switch($data){
             case 0:
-              
+                
+
+
             break;
         }});
+
         $name = $player->getName();
-        $form->setTitle(str_replace("\$name", $name, $this->getConfig()->get("title")));
-        $form->addLabel(str_replace("\$name", $name, $this->getConfig()->get("content")));
+
+        $form->setTitle($this->getConfig()->get("title"));
+        $form->setContent(str_replace("\$name", $name, $this->getConfig()->get("content")));
+        $form->addButton($this->getConfig()->get("button"));
         $player->sendForm($form);
+
     }
 
-public function onJoin(PlayerJoinEvent $event){
+public function onJoin(PlayerJoinEvent $event) {
+
     $player = $event->getPlayer();
     $this->joinuiForm($player);
 

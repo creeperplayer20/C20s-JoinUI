@@ -1,7 +1,6 @@
 <img src="https://github.com/creeperplayer20/C20s-JoinUI/blob/main/icon.png" alt="C20s JoinUI logo" title="C20s JoinUI" align="center">
 
 # C20s JoinUI
-Custom join form
 
 ### Features
 - [X] PM4 Support
@@ -15,8 +14,10 @@ Custom join form
 
 title: "§a§lJoinUI"
 
-content: "Welcome§b $name §r! \n\nYou can edit this text in the §gconfig.yml"
+content: "Welcome§b $name§r! \n\nYou can edit this text in the §gconfig.yml"
+
+button: "§aOkay"
 
 ### Image
 
-![joinui](https://user-images.githubusercontent.com/42560781/152542003-58117695-e26e-4e74-a3a5-0f35bf4f8fee.png)
+![joinui](https://user-images.githubusercontent.com/42560781/152647512-3a1ddac1-57f2-404f-9daa-59e18b661f90.png)
